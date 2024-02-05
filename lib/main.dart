@@ -24,10 +24,11 @@ class Btn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('PRINCIPAL'),
+        title: const Text('Bosetos de prueba :D/'),
       ),
       body: Center(
-        child: Row(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ElevatedButton(
                 onPressed: () {
@@ -44,10 +45,11 @@ class Btn extends StatelessWidget {
                       MaterialPageRoute(
                           builder: (context) => const Menu()));
                 },
-                child: const Text('Prototipo Menu COnfiguraciones')),
+                child: const Text('Prototipo Menu Confi')),
           ],
         ),
       ),
+      backgroundColor: const Color.fromARGB(255, 37, 37, 37),
     );
   }
 }
