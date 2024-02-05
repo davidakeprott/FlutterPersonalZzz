@@ -11,11 +11,12 @@ class Menu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: barraEstado(),
-      body: ListView(
+      body: Column(
         children: [
           perfil(),
           opciones(),
-          out(),
+          Expanded(child: fin())
+          
         ],
       ),
     );

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget perfil() {
   return Container(
-    margin: const EdgeInsets.all(1),
+    //margin: const EdgeInsets.all(1),
     color: const Color(0xFF16697A),
     padding: const EdgeInsets.all(22.0),
     height: 160,
@@ -115,11 +115,9 @@ Widget opciones() {
   );
 }
 
-Widget out() {
-  return Container(
-    margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-    decoration: const BoxDecoration(color: Colors.white),
-    height: 380,
+Widget fin() {
+  return Padding(
+    padding: const EdgeInsets.all(15.0),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -129,8 +127,7 @@ Widget out() {
               overlayColor: MaterialStateProperty.resolveWith<Color?>(
                 (Set<MaterialState> states) {
                   if (states.contains(MaterialState.pressed)) {
-                    return const Color(
-                        0xFF82C0CC); // El color del efecto splash
+                    return const Color(0xFF82C0CC); // El color del efecto splash
                   }
                   return null; // Dejará el efecto de splash predeterminado si no hay una presión
                 },
@@ -299,7 +296,8 @@ Widget miperfil() {
 
 PreferredSizeWidget barraEstado() {
   return PreferredSize(
-    preferredSize: const Size.fromHeight(50.0), // Altura personalizada para el AppBar
+    preferredSize:
+        const Size.fromHeight(50.0), // Altura personalizada para el AppBar
     child: AppBar(
       title: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
