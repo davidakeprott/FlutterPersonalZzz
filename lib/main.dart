@@ -1,10 +1,10 @@
-
+import 'package:bhm_app/Core/presentation/screens/menu_confi.dart';
 import 'package:bhm_app/tarjetaCredito.dart';
 import 'package:flutter/material.dart';
 
-
-void main(){runApp(const MyApp());}
-
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -27,14 +27,28 @@ class Btn extends StatelessWidget {
         title: const Text('PRINCIPAL'),
       ),
       body: Center(
-        child: Container(
-          child: ElevatedButton(
-            onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> const TarjetaCredito()));
-            }, 
-            child: const Text('Ver Tarjeta')),
+        child: Row(
+          children: [
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TarjetaCredito()));
+                },
+                child: const Text('Ver Tarjeta')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Menu()));
+                },
+                child: const Text('Prototipo Menu COnfiguraciones')),
+          ],
         ),
       ),
     );
   }
 }
+
