@@ -1,3 +1,4 @@
+import 'package:bhm_app/Core/presentation/screens/ajustes_perfil.dart';
 import 'package:bhm_app/Core/presentation/screens/menu_confi.dart';
 import 'package:bhm_app/tarjetaCredito.dart';
 import 'package:flutter/material.dart';
@@ -46,6 +47,14 @@ class Btn extends StatelessWidget {
                           builder: (context) => const Menu()));
                 },
                 child: const Text('Prototipo Menu Confi')),
+                            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Ajustesperfil()));
+                },
+                child: const Text('Prototipo confi perfil')),
           ],
         ),
       ),

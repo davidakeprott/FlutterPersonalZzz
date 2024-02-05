@@ -37,7 +37,7 @@ Widget perfil() {
                 height: 80,
                 child: ClipOval(
                   child: Image.network(
-                    'https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2016/09/569465-whatsapp-que-tus-contactos-ponen-rana-perfil.jpg?tf=3840x',
+                    'https://tecolotito.elsiglodedurango.com.mx/cdn-cgi/image/format=auto,width=1024/i/2023/04/1166288.jpeg',
                     fit: BoxFit.cover,
                   ),
                 )),
@@ -54,7 +54,7 @@ Widget perfil() {
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: const Text(
-                      'Paco Berto Chan Kun',
+                      'Claudia Flores',
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ Widget perfil() {
                   Container(
                     width: 190,
                     alignment: Alignment.center,
-                    child: const Text('pacoberto@hotmail.com',
+                    child: const Text('ClaudiaFlores@hotmail.com',
                         style: TextStyle(
                           color: Colors.white,
                         )),
