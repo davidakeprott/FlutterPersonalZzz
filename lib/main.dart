@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const Btn(),
+    return const MaterialApp(
+      home:  Btn(),
     );
   }
 }

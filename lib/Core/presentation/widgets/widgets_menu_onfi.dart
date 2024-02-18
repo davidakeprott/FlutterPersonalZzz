@@ -50,7 +50,7 @@ Widget perfil() {
                     alignment: Alignment.center,
                     padding: const EdgeInsets.all(5.0),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                     // color: Colors.white,
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: const Text(
@@ -58,7 +58,7 @@ Widget perfil() {
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black),
+                          color: Colors.white),
                     ),
                   ),
                   Container(
@@ -182,14 +182,14 @@ Widget ayuda() {
                   child: const Icon(
                     Icons.help_outline_rounded,
                     size: 30.0,
-                    color: Color(0xFF16697A),
+                    color: Color(0xff878787),
                   ),
                 ),
                 Container(
                   padding: const EdgeInsets.all(2.0),
                   child: const Text(
                     'Ayuda',
-                    style: TextStyle(fontSize: 15, color: Color(0xFFF25C05)),
+                    style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 80, 79, 79)),
                   ),
                 )
               ]),
@@ -198,7 +198,7 @@ Widget ayuda() {
           const Icon(
             Icons.chevron_right,
             size: 50,
-            color: Color(0xFF16697A),
+            color: Color(0xff878787),
           )
         ],
       ));
@@ -228,14 +228,14 @@ Widget seguridad() {
                   child: const Icon(
                     Icons.security_rounded,
                     size: 30.0,
-                    color: Color(0xFF16697A),
+                    color: Color(0xff878787),
                   ),
                 ),
                 Container(
                     padding: const EdgeInsets.all(2.0),
                     child: const Text(
                       'Seguridad',
-                      style: TextStyle(fontSize: 15, color: Color(0xFFF25C05)),
+                      style: TextStyle(fontSize: 15, color:  Color.fromARGB(255, 80, 79, 79)),
                     ))
               ]),
             ],
@@ -243,7 +243,7 @@ Widget seguridad() {
           const Icon(
             Icons.chevron_right,
             size: 50,
-            color: Color(0xFF16697A),
+            color: Color(0xff878787),
           )
         ],
       ));
@@ -273,14 +273,14 @@ Widget miperfil() {
                   child: const Icon(
                     Icons.person_outlined,
                     size: 30.0,
-                    color: Color(0xFF16697A),
+                    color: Color(0xff878787),
                   ),
                 ),
                 Container(
                     padding: const EdgeInsets.all(2.0),
                     child: const Text(
                       'Perfil',
-                      style: TextStyle(fontSize: 15, color: Color(0xFFF25C05)),
+                      style: TextStyle(fontSize: 15, color: Color(0xff878787)),
                     ))
               ]),
             ],
@@ -288,7 +288,7 @@ Widget miperfil() {
           const Icon(
             Icons.chevron_right,
             size: 50,
-            color: Color(0xFF16697A),
+            color: Color(0xff878787),
           )
         ],
       ));

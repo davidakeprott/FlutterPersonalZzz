@@ -8,7 +8,7 @@ class TarjetaCredito extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Tarjeta(),
     );
   }
@@ -28,9 +28,9 @@ class Tarjeta extends StatelessWidget {
           width: 350,
           height: 200,
           alignment: Alignment.center,
-          padding: EdgeInsets.all(10.5),
+          padding: const EdgeInsets.all(10.5),
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 29, 26, 179),
+            color:Color.fromARGB(255, 18, 97, 90),
             borderRadius: BorderRadius.circular(10.0)
           ),
           child: Column(

@@ -1,12 +1,24 @@
+import 'package:bhm_app/Core/data/models/UserModel.dart';
+import 'package:bhm_app/Core/data/models/cardModel.dart';
+import 'package:bhm_app/Core/domain/entities/User.dart';
+//import 'package:bhm_app/Core/domain/entities/card.dart';
+import 'package:bhm_app/Core/domain/entities/Card.dart';
+
 import 'package:flutter/material.dart';
 
 Widget widgetOneCard() {
+  final User user = User(
+      name: 'Armin Yeimi',
+      telephone: '9999999',
+      email: 'das@gmail.com',
+      password: '0000',);
+
+
+  final UserModel usermodel= UserModel.fromEntity(user);
+
   return Column(
     children: [
-      const Text(
-        'Vista Empresarial',
-        style: TextStyle(color: Colors.white, fontSize: 18),
-      ),
+       Text(usermodel.name, style: const TextStyle(fontSize: 20, color: Colors.white),),
       Row(
         children: [
           SizedBox(
@@ -21,13 +33,22 @@ Widget widgetOneCard() {
 }
 
 Widget widgetTwoCard() {
-  return const Column(
+
+  final Cartita carta= Cartita(
+    cardOwner: 'C.Alias',
+    cardNumber:'999999',
+    logo:'logo.png',
+    cardDate:'12/02/24',
+  );
+
+  final CardModel cardModel = CardModel.fromEntity(carta);
+  return  Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
-      Text('4000 1234 5678 9010',
+      Text(cardModel.cardNumber,
           style: TextStyle(color: Colors.white, fontSize: 25)),
-      Text('12/24', style: TextStyle(color: Colors.white, fontSize: 14)),
-      Row(
+     const  Text('12/24', style: TextStyle(color: Colors.white, fontSize: 14)),
+     const  Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text('C.Arias', style: TextStyle(color: Colors.white, fontSize: 14))
