@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 
 Widget widgetOneCard() {
   final User user = User(
-      name: 'Armin Yeimi',
-      telephone: '9999999',
+      name: 'DAVID AKE',
+      telephone: '12120311',
       email: 'das@gmail.com',
       password: '0000',);
 
@@ -36,7 +36,7 @@ Widget widgetTwoCard() {
 
   final Cartita carta= Cartita(
     cardOwner: 'C.Alias',
-    cardNumber:'999999',
+    cardNumber:'123322123',
     logo:'logo.png',
     cardDate:'12/02/24',
   );

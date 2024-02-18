@@ -30,7 +30,7 @@ class Tarjeta extends StatelessWidget {
           alignment: Alignment.center,
           padding: const EdgeInsets.all(10.5),
           decoration: BoxDecoration(
-            color:Color.fromARGB(255, 18, 97, 90),
+            color:const Color.fromARGB(255, 27, 115, 216),
             borderRadius: BorderRadius.circular(10.0)
           ),
           child: Column(
