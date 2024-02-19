@@ -1,29 +1,23 @@
-
-
-import 'package:bhm_app/Core/domain/entities/Card.dart';
+import 'package:bhm_app/Core/domain/entities/DatosCard.dart';
 
 class CardModel {
-  final String cardOwner;
-  final String cardNumber;
+  final String propietario;
+  final String numeroTarjeta;
   final String logo;
-  final String cardDate;
-  final int ccv;
+  final String fecha;
+  final int? ccv;
 
   CardModel(
-      {required this.cardOwner,
-      required this.cardNumber,
+      {required this.propietario,
+      required this.numeroTarjeta,
       required this.logo,
-      required this.cardDate,
-      required this.ccv});
+      required this.fecha,
+       this.ccv
+  });
 
-  factory CardModel.fromEntity(Cartita cartita) {
-    return CardModel(
-        cardOwner: cartita.cardOwner,
-        cardNumber: cartita.cardNumber,
-        logo: cartita.logo,
-        cardDate: cartita.cardDate,
-        ccv: 0);
+  factory CardModel.fromEntity(DatosCard datoscard){
+    return CardModel(propietario: datoscard.propietario, numeroTarjeta: datoscard.numeroTarjeta, logo: datoscard.logo, fecha: datoscard.fecha, ccv: 0);
   }
 
-  void get() {}
+  void get(){}
 }

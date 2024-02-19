@@ -34,8 +34,8 @@ class Estructura extends StatelessWidget {
             width: 150,
             height: 150,
             child: ClipOval(
-              child: Image.network(
-                  'https://tecolotito.elsiglodedurango.com.mx/cdn-cgi/image/format=auto,width=1024/i/2023/04/1166288.jpeg'),
+              child: Image.asset(
+                  'images/perfil.jpeg'),
             ),
           ),
           Container(

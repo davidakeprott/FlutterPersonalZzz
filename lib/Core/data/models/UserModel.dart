@@ -1,29 +1,20 @@
-import 'package:bhm_app/Core/domain/entities/User.dart';
+import 'package:bhm_app/Core/domain/entities/DatosUser.dart';
 
 class UserModel {
-  /*Atributos*/
-  final String name;
-  final String telephone;
-  final String email;
+  final String nombre;
+  final String celular;
+  final String correo;
   final String password;
 
   //constructor
   UserModel(
-      {required this.name,
-      required this.telephone,
-      required this.email,
-      required this.password});
+      {required this.nombre,
+      required this.celular,
+      required this.correo,
+      required this.password
+  });
 
-  factory UserModel.fromEntity(User user) {
-    return UserModel(
-        name: user.name,
-        telephone: user.telephone,
-        email: user.email,
-        password: user.password);
-  }
-
-
-  void get(){
-    
+  factory UserModel.fromEntity(DatosUser user){
+    return UserModel(nombre: user.nombre, celular: user.celular, correo: user.correo, password: user.password);
   }
 }
