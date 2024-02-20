@@ -17,39 +17,43 @@ Widget widgetOneCard() {
     children: [
       Text(
         usermodel.nombre,
-        style: const TextStyle(fontSize: 20, color: Colors.white, fontFamily: 'mono'),
+        style: const TextStyle(
+            fontSize: 20, color: Colors.white, fontFamily: 'mono'),
       ),
       Row(
         children: [
           SizedBox(
-              height: 40,
-              width: 40,
-              child: Image.asset('images/chip.jpeg'))
+              height: 40, width: 40, child: Image.asset('images/chip.jpeg'))
         ],
       ),
     ],
   );
 }
 
-Widget widgetTwoCard() {
-  final DatosCard carta = DatosCard(
-    propietario: 'David Ake',
-    numeroTarjeta: '4000 1234 5678 9010',
-    logo: 'logo.png',
-    fecha: '12/02/24',
-  );
+Widget widgetTwoCard(DatosCard carta) {
+  // final DatosCard carta = DatosCard(
+  //   propietario: 'David Ake',
+  //   numeroTarjeta: '4000 1234 5678 9010',
+  //   logo: 'logo.png',
+  //   fecha: '12/02/24',
+  // );
   final CardModel cardModel = CardModel.fromEntity(carta);
 
   return Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
-      Text(cardModel.numeroTarjeta, style: const TextStyle(color: Colors.white, fontSize: 25, fontFamily: 'mono')),
-      Text(cardModel.fecha, style: const TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'mono')),
+      Text(cardModel.numeroTarjeta,
+          style: const TextStyle(
+              color: Colors.white, fontSize: 25, fontFamily: 'mono')),
+      Text(cardModel.fecha,
+          style: const TextStyle(
+              color: Colors.white, fontSize: 14, fontFamily: 'mono')),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(cardModel.propietario,
-              style: const TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'mono'))
+              style: const TextStyle(
+                  color: Colors.white, fontSize: 14, fontFamily: 'mono'))
         ],
       ),
     ],
@@ -57,15 +61,17 @@ Widget widgetTwoCard() {
 }
 
 class WidgetUltimo extends StatelessWidget {
-  const WidgetUltimo({super.key});
-
+  //const WidgetUltimo({super.key});
+  final DatosUser datos;
+  const WidgetUltimo({super.key, required this.datos});
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Text('NOMBRE DE LA EMPRESA',
-            style: TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'mono')),
+        Text(datos.nombre,
+            style: const TextStyle(
+                color: Colors.white, fontSize: 14, fontFamily: 'mono')),
         SizedBox(
           width: 50,
           height: 30,
