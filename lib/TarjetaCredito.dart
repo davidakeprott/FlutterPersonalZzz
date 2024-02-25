@@ -34,19 +34,21 @@ class Tarjeta extends StatelessWidget {
     );
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TARGETA DE CREDITO'),
+        title: const Text('Login'),
       ),
       body: Center(
         child: Container(
-          width: 350,
-          height: 200,
+          width: 400,
+          height: 230,
           alignment: Alignment.center,
           padding: const EdgeInsets.all(10.5),
+          margin: const EdgeInsets.all(10.0),
           decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 13, 94, 187),
-              borderRadius: BorderRadius.circular(10.0)),
-          child: Column(
-            children: [
+              color:const Color.fromARGB(255, 11, 25, 230),
+              borderRadius: BorderRadius.circular(10.0)),            
+          child:  Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [           
               widgetOneCard(),
               widgetTwoCard(carta),
               WidgetUltimo(datos: user)

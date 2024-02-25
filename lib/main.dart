@@ -1,3 +1,4 @@
+import 'package:bhm_app/Core/presentation/screens/LoginPage.dart';
 import 'package:bhm_app/Core/presentation/screens/ajustes_perfil.dart';
 import 'package:bhm_app/Core/presentation/screens/menu_confi.dart';
 import 'package:bhm_app/tarjetaCredito.dart';
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home:  Btn(),
+      home: Btn(),
     );
   }
 }
@@ -25,41 +26,177 @@ class Btn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bosetos de prueba :D/'),
-      ),
-      body: Center(
+          title: const Text('Bosetos de prueba :D/',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  fontFamily: 'mono',
+                  color: Colors.white)),
+          centerTitle: true,
+          backgroundColor: Colors.black),
+      body: Container(
+        decoration: const BoxDecoration(color: Colors.black),
+        padding: const EdgeInsets.fromLTRB(15, 0, 15, 25),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TarjetaCredito()));
-                },
-                child: const Text('Ver Tarjeta')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Menu()));
-                },
-                child: const Text('Prototipo Menu Confi')),
-                            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Ajustesperfil()));
-                },
-                child: const Text('Prototipo confi perfil')),
+            SizedBox(
+                child: Image.asset(
+              'images/Luna.jpg',
+              fit: BoxFit.cover,
+            )),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(
+                  width: 10,
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const TarjetaCredito()));
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.black),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                      ),
+                      padding: MaterialStateProperty.all(
+                          const EdgeInsets.symmetric(
+                              horizontal: 40, vertical: 40)),
+                      textStyle: MaterialStateProperty.all(
+                          const TextStyle(fontSize: 20)),
+                    ),
+                    child: const Text('Ver Tarjeta',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                            fontFamily: 'mono',
+                            color: Color.fromARGB(255, 219, 2, 129)))),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Menu()));
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.black),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                      ),
+                      padding: MaterialStateProperty.all(
+                          const EdgeInsets.symmetric(
+                              horizontal: 40, vertical: 40)),
+                      textStyle: MaterialStateProperty.all(
+                          const TextStyle(fontSize: 20)),
+                    ),
+                    child: const Text('Menu Confi',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                            fontFamily: 'mono',
+                            color: Color.fromARGB(255, 10, 153, 189)))),
+                const SizedBox(
+                  width: 10,
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(
+                  width: 10,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Ajustesperfil()));
+                  },
+                  style: ButtonStyle(
+                    // Personaliza el color de fondo
+                    backgroundColor: MaterialStateProperty.all(Colors.black),
+                    // Personaliza la forma del botón
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                        // side: const BorderSide(color: Color.fromARGB(255, 150, 147, 147)),
+                      ),
+                    ),
+                    // Personaliza el tamaño del botón mediante el padding
+                    padding: MaterialStateProperty.all(
+                        const EdgeInsets.symmetric(
+                            horizontal: 40, vertical: 40)),
+                    // Personaliza el tamaño del texto
+                    textStyle: MaterialStateProperty.all(
+                        const TextStyle(fontSize: 20)),
+                  ),
+                  child: const Text(
+                    'Confi perfil',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        fontFamily: 'mono',
+                        color: Color.fromARGB(255, 2, 190, 59)),
+                  ),
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginPage()));
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.black),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                      ),
+                      padding: MaterialStateProperty.all(
+                          const EdgeInsets.symmetric(
+                              horizontal: 40, vertical: 40)),
+                      textStyle: MaterialStateProperty.all(
+                          const TextStyle(fontSize: 20)),
+                    ),
+                    child: const Text('LOGIN',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                            fontFamily: 'mono',
+                            color: Color.fromARGB(255, 234, 238, 6)))),
+                const SizedBox(
+                  width: 10,
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
           ],
         ),
       ),
-      backgroundColor: const Color.fromARGB(255, 37, 37, 37),
     );
   }
 }
-
