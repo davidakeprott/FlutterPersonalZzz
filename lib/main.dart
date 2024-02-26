@@ -42,17 +42,16 @@ class Btn extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
+                width: 100,
+                height: 100,
                 child: Image.asset(
-              'images/Luna.jpg',
-              fit: BoxFit.cover,
-            )),
+                  'images/Luna.jpg',
+                  fit: BoxFit.cover,
+                )),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(
-                  width: 10,
-                ),
                 ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -105,18 +104,12 @@ class Btn extends StatelessWidget {
                             fontSize: 16,
                             fontFamily: 'mono',
                             color: Color.fromARGB(255, 10, 153, 189)))),
-                const SizedBox(
-                  width: 10,
-                ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(
-                  width: 10,
-                ),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -177,16 +170,7 @@ class Btn extends StatelessWidget {
                             fontSize: 16,
                             fontFamily: 'mono',
                             color: Color.fromARGB(255, 234, 238, 6)))),
-                const SizedBox(
-                  width: 10,
-                ),
               ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const SizedBox(
-              height: 10,
             ),
             const SizedBox(
               height: 10,
