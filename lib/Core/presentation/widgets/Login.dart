@@ -1,3 +1,4 @@
+import 'package:bhm_app/Core/presentation/screens/Home.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -25,12 +26,12 @@ class _LoginState extends State<Login> {
             ),
           ),
           TextField(
-             decoration: const InputDecoration(hintText: 'Numero'),
+            decoration: const InputDecoration(hintText: 'Numero'),
             controller: TextEditingController(text: _phoneNumber),
             style: const TextStyle(color: Colors.black38),
           ),
           TextField(
-            decoration: const InputDecoration(hintText: 'Password'),
+              decoration: const InputDecoration(hintText: 'Password'),
               controller: TextEditingController(text: _password),
               style: const TextStyle(color: Colors.black38)),
           const SizedBox(
@@ -50,7 +51,12 @@ class _LoginState extends State<Login> {
           const SizedBox(
             height: 30,
           ),
-          ElevatedButton(onPressed: () {}, child: const Text('Preciona')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Home()));
+              },
+              child: const Text('Preciona')),
         ],
       ),
     );
