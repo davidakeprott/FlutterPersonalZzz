@@ -1,3 +1,4 @@
+import 'package:bhm_app/Core/presentation/screens/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -34,10 +35,12 @@ class Home extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
+                    width: 100,
+                    height: 100,
                     child: ClipOval(
-                      child: Image.asset(
-                        'images/perfil.jpeg',
-                        fit: BoxFit.fill,
+                      child: Image.network(
+                        'https://www.unotv.com/uploads/2023/04/mujer-ai-112122.jpg',
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
@@ -114,6 +117,13 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
+           const  SizedBox(height: 430),
+               ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) =>  const LoginPage()));
+              },
+              child: const Text('Cerrar Sesion')),
           ],
         ),
       ),

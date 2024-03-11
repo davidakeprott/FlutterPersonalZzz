@@ -1,5 +1,6 @@
 import 'package:bhm_app/Core/presentation/screens/Home.dart';
 import 'package:flutter/material.dart';
+import 'package:local_auth/local_auth.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -12,6 +13,29 @@ class _LoginState extends State<Login> {
   bool _ifChecked = false;
   String _phoneNumber = "";
   String _password = "";
+
+  final LocalAuthentication _localAuthentication = LocalAuthentication();
+
+  Future<void> _auth() async {
+    bool authenticated = false;
+    try {
+      authenticated = await _localAuthentication.authenticate(
+          localizedReason: "Autenticate para acceder",
+          options:
+              AuthenticationOptions(stickyAuth: true, useErrorDialogs: true));
+    } catch (e) {
+      print(e);
+    }
+    if (authenticated) {
+      Navigator.pushReplacement<void, void>(
+          context,
+          MaterialPageRoute<void>(
+              builder: (BuildContext context) => const Home()));
+    } else {
+      print("Fallo auth");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -53,10 +77,9 @@ class _LoginState extends State<Login> {
           ),
           ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) =>  Home()));
+                _auth();
               },
-              child: const Text('Preciona')),
+              child: const Text('INGRESAR')),
         ],
       ),
     );
